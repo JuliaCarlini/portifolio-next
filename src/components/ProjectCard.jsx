@@ -1,8 +1,8 @@
 import React from "react";
 import { FaLinux, FaServer, FaNetworkWired, FaReact, FaCss3Alt } from "react-icons/fa";
 import { MdSecurity } from "react-icons/md";
-import { SiWireshark, SiMqtt, SiNextdotjs, SiVercel } from "react-icons/si";
-
+import { SiWireshark, SiMqtt, SiNextdotjs, SiVercel, SiPhp, SiJavascript, SiHtml5, SiBootstrap, SiNetlify  } from "react-icons/si";
+import { SiFortinet, SiVmware, SiVirtualbox } from "react-icons/si";
 
 const iconsMap = {
   linux: <FaLinux />,
@@ -15,6 +15,14 @@ const iconsMap = {
   next: <SiNextdotjs />,
   css: <FaCss3Alt />,
   vercel: <SiVercel />,
+  php: <SiPhp />,
+  javascript: <SiJavascript />,
+  html: <SiHtml5 />,
+  boostrap: <SiBootstrap />,
+  netlify: <SiNetlify />,
+  vmware: <SiVmware />,
+  virtualbox: <SiVirtualbox />,
+  firewall: <SiFortinet />
 };
 
 

@@ -8,9 +8,11 @@ export default function Projects() {
     <section id="projects" className="projects-section">
       <h2 className="section-title">Projetos</h2>
       <div className="projects-grid">
-        {projects.map((p) => (
-          <ProjectCard key={p.title} {...p} />
-        ))}
+        {projects
+          .filter(p => p.featured)
+          .map(p => (
+            <ProjectCard key={p.title} {...p} />
+          ))}
       </div>
       <Link href="/projects-cyber" className="button-green">
         Projetos Cibersegurança
