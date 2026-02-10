@@ -1,18 +1,35 @@
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsOpen(false); // fecha o menu ao clicar
+  const scrollToSection = async (id) => {
+    setIsOpen(false);
+
+    if (router.pathname !== "/") {
+      await router.push("/");
     }
+
+    // pequeno delay para garantir que o DOM existe
+    requestAnimationFrame(() => {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      const yOffset = -80;
+      const y =
+        el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: "smooth",
+      });
+    });
   };
 
   return (
-    <header>
+    <header className="header">
       <img className="my-img" src="/img/myImg.jpg" alt="my-Img" />
       <p className="header-p">Julia Carlini</p>
 

@@ -1,7 +1,7 @@
 import Header from "../components/Header"
 import Homepag from "../components/Homepag"
 import About from "../components/About"
-import Projects from "../components/Projects.jsx"
+import Projects from "../components/ProjectsSection.jsx"
 import Contacts from "../components/Contacts"
 
 export default function Home() {

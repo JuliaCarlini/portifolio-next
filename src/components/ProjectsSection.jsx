@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { projects } from "./projects.js";
+import Link from "next/link";
 
 export default function Projects() {
   return (
@@ -11,6 +12,12 @@ export default function Projects() {
           <ProjectCard key={p.title} {...p} />
         ))}
       </div>
+      <Link href="/projects-cyber" className="button-green">
+        Projetos Cibersegurança
+      </Link>
+      <Link href="/projects-web" className="button-green">
+        Projetos Web Development
+      </Link>
     </section>
   );
 }

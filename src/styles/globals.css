@@ -4,6 +4,7 @@ body, html {
     margin: 0;
     font-family: "Satoshi", sans-serif;
     background-color: black;
+    scroll-behavior: smooth;
 }
 
 /* Header */
@@ -28,28 +29,98 @@ header {
     border-radius: 1rem;
 }
 
-nav {
+.nav {
     text-align: right;
     margin: 0.9rem;
     margin-left: auto;
+
+    display: flex;
+    gap: 0.5rem;
+
+    /* animação */
+    transition: 
+        opacity 0.3s ease,
+        transform 0.3s ease;
 }
 
 .nav button {
     padding: 1rem;
     font-size: medium;
     color: #bbed2f;
-    text-decoration: none;
     background: none;
     border: none;
+    cursor: pointer;
+    position: relative;
+
+    transition: color 0.2s ease;
+}
+
+/* underline animado (mais clean que text-decoration) */
+.nav button::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    width: 0;
+    height: 2px;
+    background-color: #bbed2f;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav button:hover::after {
+    width: 60%;
 }
 
 .nav button:hover {
-    text-decoration: underline;
+    color: #d7ff4f;
 }
 
+/* botão hamburguer */
 .toggle-btn {
     display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #bbed2f;
+    cursor: pointer;
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .toggle-btn {
+        display: block;
+    }
+
+    .nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+
+        flex-direction: column;
+        align-items: flex-end;
+
+        background-color: #0f0f0f;
+        padding: 1rem;
+
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+    }
+
+    .nav.open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .nav button {
+        padding: 0.75rem 1rem;
+        width: 100%;
+        text-align: right;
+    }
+}
+
 
 /* Homepag */
 .pag-img{
@@ -87,7 +158,7 @@ nav {
     padding: 1rem;
 }
 
-.text-p button {
+.button-green {
     font-size: 1.2rem;
     padding: 0.75rem 2rem;
     border-radius: 2rem;
@@ -98,9 +169,11 @@ nav {
     cursor: pointer;
     background-color: #bbed2f;
     margin: 2rem;
+    color: black;
+    text-decoration: none;
 }
 
-.text-p button:hover {
+.button-green:hover {
     background-color: #c2ec4c;
     transform: scale(1.05);
 }
@@ -187,6 +260,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .project-card {
@@ -229,6 +303,50 @@ nav {
 .project-card a:hover {
     text-decoration: underline;
 }
+
+
+.tool-icon {
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+ .tooltip {
+          visibility: hidden;
+          background-color: #111;
+          color: #fff;
+          text-align: center;
+          padding: 0.3rem 0.5rem;
+          border-radius: 4px;
+          position: absolute;
+          bottom: 125%;
+          left: 50%;
+          transform: translateX(-50%);
+          opacity: 0;
+          transition: opacity 0.3s;
+          font-size: 0.8rem;
+          white-space: nowrap;
+          z-index: 10;
+        }
+
+        .tool-icon:hover .tooltip {
+          visibility: visible;
+          opacity: 1;
+        }
+
+/* Responsividade */
+ @media (max-width: 600px) {
+          .project-tools {
+            justify-content: center;
+          }
+
+          .project-links {
+            flex-direction: column;
+            gap: 0.5rem;
+          }
+        }        
+
 
 /* About */
 .about-div{
@@ -537,5 +655,29 @@ nav {
   list-style: disc;
   margin-left: 20px;
   line-height: 1.6;
+}
+
+.projects-page {
+  padding: 0 2rem 1rem;
+}
+
+.projects-hero {
+  max-width: 800px;
+  margin-bottom: 4rem;
+  color: #f1f0f0;
+}
+
+.projects-hero h1 {
+  font-size: 3rem;
+}
+
+.projects-hero p {
+  opacity: 0.8;
+}
+
+.projects-list .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
 }
 

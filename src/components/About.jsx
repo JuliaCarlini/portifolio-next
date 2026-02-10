@@ -30,9 +30,10 @@ export default function About() {
         <div className="about-card">
           <h3 className="about-subtitle">Skills / Diferenciais</h3>
           <ul className="about-list">
-            <li>Desenvolvimento Frontend: React, HTML, CSS, JavaScript</li>
-            <li>Cibersegurança: análise de vulnerabilidades, boas práticas de proteção</li>
-            <li>Design responsivo e UX/UI</li>
+            <li>Pentesting (Footprinting, análise de vulnerabilidades, mitigação)</li>
+            <li>IoT & Segurança de Dispositivos</li>
+            <li>React / Next.js, HTML, CSS, JavaScript</li>
+            <li>GitHub & Deploy</li>
             <li>Disciplina e foco para entregar resultados de qualidade</li>
           </ul>
         </div>

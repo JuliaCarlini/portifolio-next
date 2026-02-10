@@ -1,13 +1,15 @@
 import React from "react";
-
+import Link from "next/link";
+import { useState } from "react";
 
 const Homepag = () => {
-   // const navigate = useNavigate();
-
-    const goToProjects = () => {
-        navigate("/Projects");
-    };
-
+    const [isOpen, setIsOpen] = useState(false);    
+    const scrollToSection = (id) => { 
+        const element = document.getElementById(id); 
+        if (element) { element.scrollIntoView({ behavior: "smooth" }); 
+        setIsOpen(false); // fecha o menu ao clicar 
+        } 
+};
     return (
         <div>
             <div className="pag-p">
@@ -16,7 +18,8 @@ const Homepag = () => {
                     Carlini.</h1>
                     <p>Desenvolvedora Web + <br />
                     Recém licenciada em Cybersegurança e <br /> Redes informáticas</p>
-                    <button onClick={goToProjects}>Veja o meu portfólio</button>
+                    <button className="button-green" onClick={() => scrollToSection("projects")}>Veja o Meu Portifolio</button>
+
                 </section>
 
                 <img className="pag-img" src="img/processador.jpg" alt="Processador" />
