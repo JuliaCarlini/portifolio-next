@@ -1,10 +1,15 @@
 /* Reset e Globais */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body, html {
     height: 100%;
     margin: 0;
     font-family: "Satoshi", sans-serif;
     background-color: black;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -15,6 +20,9 @@ header {
     padding: 0.5rem;
     background-color: #000000d4;
     box-shadow: 10px 10px 20px rgba(35, 35, 35, 0.71);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .header-p {
@@ -124,15 +132,19 @@ header {
 
 /* Homepag */
 .pag-img{
-    height: 30%;
+    height: auto;
     width: 35%;
+    max-width: 100%;
     margin-top: 1rem;
     margin-right: 2rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
 }
 .pag-p {
     display: flex;
     min-height: 100vh;
     padding: 0 2rem;
+    align-items: center;
 }
 
 .text-p {
@@ -171,6 +183,7 @@ header {
     margin: 2rem;
     color: black;
     text-decoration: none;
+    display: inline-block;
 }
 
 .button-green:hover {
@@ -188,9 +201,9 @@ header {
 }
 
 .div-icons {
-   position: relative; /* Necessário para posicionar o vídeo */
-    padding: 4rem;
-    overflow: hidden; /* Evita rolagem extra */
+   position: relative;
+    padding: 4rem 2rem;
+    overflow: hidden;
 }
 
 .section-icons {
@@ -258,7 +271,7 @@ header {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -277,12 +290,11 @@ header {
 }
 
 .project-card img {
-    display: flex;
+    display: block;
+    width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 0.5rem;
-    padding-left: 5rem;
-
 }
 
 .project-card h3 {
@@ -524,89 +536,216 @@ header {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+        min-height: auto;
+        padding: 2rem 1.5rem;
+    }
+
+    .pag-img {
+        width: 80%;
+        max-width: 400px;
+        margin: 1rem auto 0;
     }
 
     .text-p h1 {
         font-size: 2.5rem;
     }
+
+    .text-p p {
+        font-size: 1.3rem;
+        margin: 0 auto;
+    }
+
+    .button-green {
+        margin: 1.5rem auto;
+    }
 }
 
 @media (max-width: 780px) {
+    /* Header mobile */
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
     .toggle-btn {
         display: flex;
-        background-color: rgb(0, 0, 0);
-        color: white;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        color: #bbed2f;
         border: none;
-        font-size: 1rem;
+        font-size: 1.5rem;
         cursor: pointer;
-        position: fixed;
-        right: 0.8rem;
+        margin-left: auto;
+        padding: 0.5rem;
         z-index: 1001;
-        padding: 0.625rem 0.9375rem;
-        border-radius: 0.3125rem;
     }
 
     .nav {
-        position: fixed;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
         flex-direction: column;
-        top: 0;
-        right: -28.125rem;
-        width: 15.625rem;
-        height: 100vh;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-        transition: left 0.3s ease;
+        background-color: #0f0f0fef;
+        padding: 1rem;
+        gap: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 0.3s ease, transform 0.3s ease;
     }
 
     .nav.open {
-        top: 3.9rem;
-        right: -0.8rem;
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .nav button {
+        padding: 0.75rem 1rem;
+        width: 100%;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.7);
-        width: 26%;
+        font-size: 1rem;
     }
 
     .toggle-btn.open {
-        right: 0;
-        text-align: center;
-        width: 23.5%;
+        color: #fff;
     }
 
+    /* Homepage mobile */
     .pag-p {
-        padding: 1rem;
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        min-height: auto;
+        gap: 1rem;
+    }
+
+    .pag-img {
+        width: 90%;
+        max-width: 350px;
+        margin: 1rem auto 0;
     }
 
     .text-p h1 {
         font-size: 2rem;
+        padding: 1rem 0;
     }
 
     .text-p p {
         font-size: 1rem;
+        padding: 0.5rem;
+    }
+
+    .button-green {
+        font-size: 1rem;
+        padding: 0.65rem 1.5rem;
+        margin: 1rem auto;
+    }
+
+    /* Icons section mobile */
+    .div-icons {
+        padding: 2rem 1rem;
     }
 
     .section-icons {
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
     }
 
+    .animacao-icons {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* Projects mobile */
+    .projects-section {
+        padding: 2rem 1rem;
+    }
+
+    .projects-section h2 {
+        font-size: 1.8rem;
+    }
+
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+
+    .project-card img {
+        height: 180px;
+    }
+
+    /* About mobile */
+    .about-div {
+        padding: 2rem 1rem;
+    }
+
+    .about-titulo {
+        font-size: 1.6rem;
     }
 
     .about-section {
-        flex-direction: column;
-        text-align: center;
+        padding: 1.5rem 0;
+    }
+
+    /* Contact mobile */
+    .contact-section {
+        padding: 2rem 1rem;
+    }
+
+    .contact-section h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Projects page mobile */
+    .projects-page {
+        padding: 0 1rem 1rem;
+    }
+
+    .projects-hero h1 {
+        font-size: 2rem;
+    }
+
+    .projects-hero p {
+        font-size: 0.95rem;
+    }
+
+    .projects-list .projects-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 480px) {
+    .pag-p {
+        padding: 1rem 0.75rem;
+    }
+
     .text-p h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        padding: 0.5rem 0;
+    }
+
+    .text-p p {
+        font-size: 0.9rem;
+    }
+
+    .button-green {
+        font-size: 0.9rem;
+        padding: 0.6rem 1.2rem;
+        margin: 0.75rem auto;
     }
 
     .section-icons {
@@ -614,7 +753,38 @@ header {
     }
 
     .section-icons a {
-        padding: 0.75rem;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .projects-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-titulo {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-card {
+        padding: 15px;
+    }
+
+    .contact-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .education-card {
+        padding: 10px;
+    }
+
+    .education-card img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .projects-hero h1 {
+        font-size: 1.6rem;
     }
 }
 
@@ -677,7 +847,7 @@ header {
 
 .projects-list .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 2rem;
 }
 

@@ -14,12 +14,14 @@ export default function Projects() {
             <ProjectCard key={p.title} {...p} />
           ))}
       </div>
-      <Link href="/projects-cyber" className="button-green">
-        Projetos Cibersegurança
-      </Link>
-      <Link href="/projects-web" className="button-green">
-        Projetos Web Development
-      </Link>
+      <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
+        <Link href="/projects-cyber" className="button-green" style={{ margin: 0 }}>
+          Projetos Ciberseguranca
+        </Link>
+        <Link href="/projects-web" className="button-green" style={{ margin: 0 }}>
+          Projetos Web Development
+        </Link>
+      </div>
     </section>
   );
 }
