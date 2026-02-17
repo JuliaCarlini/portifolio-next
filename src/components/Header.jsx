@@ -8,14 +8,7 @@ const Header = () => {
   const doScroll = (id) => {
     const el = document.getElementById(id);
     if (!el) return false;
-
-    const yOffset = -80;
-    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-    window.scrollTo({
-      top: y,
-      behavior: "smooth",
-    });
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
     return true;
   };
 
@@ -24,7 +17,6 @@ const Header = () => {
 
     if (router.pathname !== "/") {
       await router.push("/");
-      // Aguarda a animacao do AnimatePresence + renderizacao do DOM
       let attempts = 0;
       const tryScroll = () => {
         if (doScroll(id)) return;
@@ -35,7 +27,8 @@ const Header = () => {
       };
       setTimeout(tryScroll, 300);
     } else {
-      doScroll(id);
+      // Pequeno delay para fechar o menu antes de scrollar
+      setTimeout(() => doScroll(id), 50);
     }
   };
 
