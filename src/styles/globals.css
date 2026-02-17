@@ -154,9 +154,6 @@ header {
     padding: 0 2rem;
     align-items: center;
     position: relative;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 /* Overlay escuro - visivel apenas no mobile */
@@ -638,6 +635,10 @@ header {
         padding: 4rem 1.5rem;
         min-height: 85vh;
         gap: 0;
+        background-image: var(--bg-img) !important;
+        background-size: cover !important;
+        background-position: center !important;
+        background-repeat: no-repeat !important;
     }
 
     .pag-p-overlay {

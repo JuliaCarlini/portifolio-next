@@ -12,7 +12,7 @@ const Homepag = () => {
 };
     return (
         <div>
-            <div className="pag-p" style={{ backgroundImage: "url('img/processador.jpg')" }}>
+            <div className="pag-p" style={{ '--bg-img': "url('img/processador.jpg')" }}>
                 <div className="pag-p-overlay"></div>
                 <section className="text-p">
                     <h1>Ola, sou a Julia <br />
