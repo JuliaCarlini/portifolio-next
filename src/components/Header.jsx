@@ -5,27 +5,38 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
+  const doScroll = (id) => {
+    const el = document.getElementById(id);
+    if (!el) return false;
+
+    const yOffset = -80;
+    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({
+      top: y,
+      behavior: "smooth",
+    });
+    return true;
+  };
+
   const scrollToSection = async (id) => {
     setIsOpen(false);
 
     if (router.pathname !== "/") {
       await router.push("/");
+      // Aguarda a animacao do AnimatePresence + renderizacao do DOM
+      let attempts = 0;
+      const tryScroll = () => {
+        if (doScroll(id)) return;
+        attempts++;
+        if (attempts < 20) {
+          setTimeout(tryScroll, 50);
+        }
+      };
+      setTimeout(tryScroll, 300);
+    } else {
+      doScroll(id);
     }
-
-    // pequeno delay para garantir que o DOM existe
-    requestAnimationFrame(() => {
-      const el = document.getElementById(id);
-      if (!el) return;
-
-      const yOffset = -80;
-      const y =
-        el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-      window.scrollTo({
-        top: y,
-        behavior: "smooth",
-      });
-    });
   };
 
   return (
