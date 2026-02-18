@@ -15,11 +15,11 @@ const Homepag = () => {
             <div className="pag-p">
                 <div className="pag-p-overlay"></div>
                 <section className="text-p">
-                    <h1>Ola, sou a Julia <br />
+                    <h1>Olá, sou a Julia <br />
                     Carlini.</h1>
                     <p>Desenvolvedora Web + <br />
-                    Recem licenciada em Cyberseguranca e <br /> Redes informaticas</p>
-                    <button className="button-green" onClick={() => scrollToSection("projects")}>Veja o Meu Portifolio</button>
+                    Recém licenciada em Cibersegurança e <br /> Redes informáticas</p>
+                    <button className="button-green" onClick={() => scrollToSection("projects")}>Veja o Meu Portfólio</button>
                 </section>
 
                 <img className="pag-img" src="img/processador.jpg" alt="Processador" />

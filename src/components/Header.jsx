@@ -45,10 +45,10 @@ const Header = () => {
       </button>
 
       <nav className={`nav ${isOpen ? "open" : ""}`}>
-        <button onClick={() => scrollToSection("home")}>Home</button>
-        <button onClick={() => scrollToSection("about")}>About</button>
-        <button onClick={() => scrollToSection("projects")}>Projects</button>
-        <button onClick={() => scrollToSection("contacts")}>Contacts</button>
+        <button onClick={() => scrollToSection("home")}>Inicio</button>
+        <button onClick={() => scrollToSection("about")}>Sobre</button>
+        <button onClick={() => scrollToSection("projects")}>Projetos</button>
+        <button onClick={() => scrollToSection("contacts")}>Contactos</button>
       </nav>
     </header>
   );

@@ -76,7 +76,7 @@ const Contacts = () => {
           <a href="https://www.linkedin.com/in/julia-carlini" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <FaLinkedin size={24} />
           </a>
-          <a href="mailto:info@julia.dornelas.com" aria-label="Email">
+          <a href="mailto:julia.dornelas@outlook.com" aria-label="Email">
             <MdEmail size={24} />
           </a>
         </section>

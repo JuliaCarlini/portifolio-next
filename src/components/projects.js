@@ -4,12 +4,12 @@ export const projects = [
   {
     title: "Pentest",
     category: "cyber",
-    imageSrc: "/images/pentest.png",
+    imageSrc: "/img/pentest.png",
     description: "Footprinting, análise de vulnerabilidades e mitigação em ambiente controlado",
-    challenge: "dentificação de vulnerabilidades em ambiente controlado usando ferramentas reais de segurança.",
+    challenge: "Identificação de vulnerabilidades em ambiente controlado usando ferramentas reais de segurança.",
     result: "Vulnerabilidades críticas e médias identificadas com recomendações de mitigação.",
     tools: ["pentest", "wireshark", "linux"],
-    repoUrl: "/repos/pentest.pdf",
+    repoUrl: "/reports/projeto-pentest.pdf",
     featured: true
   },
   {
@@ -45,7 +45,7 @@ export const projects = [
     challenge: "Configurar e gerir uma rede empresarial com Active Directory, políticas de grupo e firewall.",
     result: "Ambiente de rede seguro e bem configurado com acesso controlado e políticas de segurança implementadas.",
     tools: ["Windows Server", "Active Directory", "políticas de grupo", "firewall"],
-    repoUrl: "/repos/gv.pdf",
+    repoUrl: "/reports/projeto-gestao.pdf",
     featured: false
   },
 
@@ -57,7 +57,7 @@ export const projects = [
     challenge: "Configurar e gerir sistemas de virtualização, incluindo servidores virtuais, serviços de rede e políticas de segurança.",
     result: "Ambiente virtualizado funcional com servidores virtuais configurados, serviços de rede implementados e políticas de segurança aplicadas.",
     tools: ["VMware", "VirtualBox", "Linux", "Windows"],
-    repoUrl: "/repos/vms.pdf",
+    repoUrl: "/reports/projeto-virtualizacao.pdf",
     featured: false
   },
 ];

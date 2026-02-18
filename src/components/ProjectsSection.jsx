@@ -16,7 +16,7 @@ export default function Projects() {
       </div>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem' }}>
         <Link href="/projects-cyber" className="button-green" style={{ margin: 0 }}>
-          Projetos Ciberseguranca
+          Projetos Cibersegurança
         </Link>
         <Link href="/projects-web" className="button-green" style={{ margin: 0 }}>
           Projetos Web Development

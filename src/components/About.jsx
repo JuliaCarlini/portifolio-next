@@ -12,8 +12,8 @@ export default function About() {
           <h3 className="about-subtitle">Missão</h3>
           <p className="about-p">
             Contribuir para que empresas e pessoas estejam seguras no mundo digital,
-            oferecendo soluções de desenvolvimento web robustas, visuais atrativos e 
-            proteção rigorosa contra vulnerabilidades.
+            oferecendo soluções de desenvolvimento web robustas, com design atrativo e segurança rigorosa contra vulnerabilidades.
+            
           </p>
         </div>
 
@@ -33,7 +33,7 @@ export default function About() {
             <li>Pentesting (Footprinting, análise de vulnerabilidades, mitigação)</li>
             <li>IoT & Segurança de Dispositivos</li>
             <li>React / Next.js, HTML, CSS, JavaScript</li>
-            <li>GitHub & Deploy</li>
+            <li>Git/GitHub & CI/CD</li>
             <li>Disciplina e foco para entregar resultados de qualidade</li>
           </ul>
         </div>
