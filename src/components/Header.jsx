@@ -34,7 +34,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <img className="my-img" src="/img/myImg.jpg" alt="my-Img" />
+      <img className="my-img" src="/img/myImg.jpg" alt="Foto de Julia Carlini" />
       <p className="header-p">Julia Carlini</p>
 
       <button
@@ -45,7 +45,7 @@ const Header = () => {
       </button>
 
       <nav className={`nav ${isOpen ? "open" : ""}`}>
-        <button onClick={() => scrollToSection("home")}>Inicio</button>
+        <button onClick={() => scrollToSection("home")}>Início</button>
         <button onClick={() => scrollToSection("about")}>Sobre</button>
         <button onClick={() => scrollToSection("projects")}>Projetos</button>
         <button onClick={() => scrollToSection("contacts")}>Contactos</button>

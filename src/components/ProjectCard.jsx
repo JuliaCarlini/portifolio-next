@@ -1,8 +1,8 @@
 import React from "react";
-import { FaLinux, FaServer, FaNetworkWired, FaReact, FaCss3Alt } from "react-icons/fa";
+import { FaLinux, FaServer, FaNetworkWired, FaReact, FaCss3Alt, FaShieldAlt, FaUsersCog, FaWindows, } from "react-icons/fa";
 import { MdSecurity } from "react-icons/md";
 import { SiWireshark, SiMqtt, SiNextdotjs, SiVercel, SiPhp, SiJavascript, SiHtml5, SiBootstrap, SiNetlify  } from "react-icons/si";
-import { SiFortinet, SiVmware, SiVirtualbox } from "react-icons/si";
+import { SiFortinet, SiVmware, SiVirtualbox} from "react-icons/si";
 
 const iconsMap = {
   linux: <FaLinux />,
@@ -18,14 +18,16 @@ const iconsMap = {
   php: <SiPhp />,
   javascript: <SiJavascript />,
   html: <SiHtml5 />,
-  boostrap: <SiBootstrap />,
+  bootstrap: <SiBootstrap />,
   netlify: <SiNetlify />,
   vmware: <SiVmware />,
   virtualbox: <SiVirtualbox />,
-  firewall: <SiFortinet />
+  firewall: <SiFortinet />,
+  policies: <FaUsersCog />,
+  windowsserver: <FaWindows />,
+  activedirectory: <FaShieldAlt />,
+
 };
-
-
 
 export default function ProjectCard({ title, imageSrc, description, challenge, result, repoUrl, liveUrl, tools }) {
   return (
@@ -63,7 +65,7 @@ export default function ProjectCard({ title, imageSrc, description, challenge, r
         )}
         {repoUrl && (
           <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="project-link">
-             GitHub / Relatorio 
+             GitHub / Relatório 
           </a>
         )}
       </div>
