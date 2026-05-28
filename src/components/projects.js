@@ -21,7 +21,7 @@ export const projects = [
     result: "Sistema IoT funcional com autenticação, comunicação segura e registo de eventos.",
     tools: ["html", "css", "javascript", "php", "bootstrap"],
     repoUrl: "https://github.com/JuliaCarlini/smarthome-iot",
-    liveUrl: "https://smarthome-iot.infinityfree.me/",
+    liveUrl: "https://smarthome-iot-l67x.onrender.com",
     featured: true
   },
   {
