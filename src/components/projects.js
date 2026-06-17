@@ -56,7 +56,7 @@ export const projects = [
     description: "Configuração e gestão de sistemas de virtualização e serviços virtuais em ambiente empresarial.",
     challenge: "Implementar uma infraestrutura virtualizada escalável, garantindo o isolamento de serviços e a otimização de recursos de hardware.",
     result: "Redução de custos de hardware e facilitação da recuperação de desastres através de snapshots e backups centralizados.",
-    tools: ["vmware", "virtualBox", "linux", "windows"],
+    tools: ["vmware", "virtualbox", "linux", "windowsserver"],
     repoUrl: "/reports/projeto-virtualizacao.pdf",
     featured: false
   },

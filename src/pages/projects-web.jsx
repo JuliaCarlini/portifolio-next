@@ -5,28 +5,27 @@ import Header from "@/components/Header";
 
 export default function ProjectsWeb() {
   return (
-    <main className="projects-page">
-        <Header></Header>
-      {/* HERO */}
-      <section className="projects-hero">
-        <h1>Projetos</h1>
-        <p>
-          Projetos práticos em desenvolvimento web,
-          com foco em segurança, performance e soluções reais.
-        </p>
-      </section>
+    <>
+      <Header />
+      <main className="projects-page">
+        <section className="projects-hero">
+          <h1>Projetos Web</h1>
+          <p>
+            Aplicações web desenvolvidas com foco em usabilidade, responsividade
+            e boas práticas de desenvolvimento front-end e back-end.
+          </p>
+        </section>
 
-      {/* LISTA DE PROJETOS */}
-      <section className="projects-list">
-        <div className="projects-grid">
-          {
-          projects.filter(
-        (project) => project.category === "web"
-      ).map((p) => (  
-            <ProjectCard key={p.title} {...p} />
-            ))}
-        </div>
-      </section>
-    </main>
+        <section className="projects-list">
+          <div className="projects-grid">
+            {projects
+              .filter((project) => project.category === "web")
+              .map((p) => (
+                <ProjectCard key={p.title} {...p} />
+              ))}
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

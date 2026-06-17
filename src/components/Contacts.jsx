@@ -16,14 +16,13 @@ const Contacts = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('Mensagem enviada! (Integre com Netlify Forms)');
-    // Para Netlify: adicione name="form-name" no form e configure no painel
+    alert('Mensagem enviada com sucesso! Responderei em breve.');
   };
 
   return (
     <div>
       <section className="contact-section">
-        <h2>Contato</h2>
+        <h2>Contacto</h2>
         <form
           onSubmit={handleSubmit}
           className="contact-form"

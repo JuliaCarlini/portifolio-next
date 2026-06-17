@@ -27,14 +27,13 @@ const Header = () => {
       };
       setTimeout(tryScroll, 300);
     } else {
-      // Pequeno delay para fechar o menu antes de scrollar
       setTimeout(() => doScroll(id), 50);
     }
   };
 
   return (
     <header className="header">
-      <img className="my-img" src="/img/myImg.jpg" alt="Foto de Julia Carlini" />
+      <img className="my-img" src="/img/myImg.png" alt="Foto de Julia Carlini" />
       <p className="header-p">Julia Carlini</p>
 
       <button
@@ -46,6 +45,7 @@ const Header = () => {
 
       <nav className={`nav ${isOpen ? "open" : ""}`}>
         <button onClick={() => scrollToSection("home")}>Início</button>
+        <button onClick={() => scrollToSection("skills")}>Skills</button>
         <button onClick={() => scrollToSection("about")}>Sobre</button>
         <button onClick={() => scrollToSection("projects")}>Projetos</button>
         <button onClick={() => scrollToSection("contacts")}>Contactos</button>

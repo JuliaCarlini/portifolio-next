@@ -5,26 +5,27 @@ import Header from "@/components/Header";
 
 export default function ProjectsCyber() {
   return (
-    <main className="projects-page">
-        <Header></Header>
-      {/* HERO */}
-      <section className="projects-hero">
-        <h1>Projetos</h1>
-        <p>
-          Projetos práticos em cibersegurança,
-          com foco em segurança, performance e soluções reais.
-        </p>
-      </section>
+    <>
+      <Header />
+      <main className="projects-page">
+        <section className="projects-hero">
+          <h1>Projetos de Cibersegurança</h1>
+          <p>
+            Análises de vulnerabilidades, configuração de redes empresariais,
+            virtualização e implementação de protocolos seguros em ambientes controlados.
+          </p>
+        </section>
 
-      {/* LISTA DE PROJETOS */}
-      <section className="projects-list">
-        <div className="projects-grid">
-            {projects.filter(
-              (project) => project.category === "cyber").map((p) => (  
+        <section className="projects-list">
+          <div className="projects-grid">
+            {projects
+              .filter((project) => project.category === "cyber")
+              .map((p) => (
                 <ProjectCard key={p.title} {...p} />
               ))}
-        </div>
-      </section>
-    </main>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }
