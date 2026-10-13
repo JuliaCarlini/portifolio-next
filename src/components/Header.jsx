@@ -1,6 +1,13 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 
+const links = [
+  { id: "servicos", label: "Serviços" },
+  { id: "projetos", label: "Projetos" },
+  { id: "sobre", label: "Sobre" },
+  { id: "contacto", label: "Contacto", cta: true },
+];
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
@@ -33,22 +40,31 @@ const Header = () => {
 
   return (
     <header className="header">
-      <img className="my-img" src="/img/myImg.png" alt="Foto de Julia Carlini" />
-      <p className="header-p">Julia Carlini</p>
+      <button className="header-brand" onClick={() => scrollToSection("inicio")}>
+        <img className="my-img" src="/img/myImg.png" alt="" />
+        Julia Carlini
+      </button>
 
       <button
         className={`toggle-btn ${isOpen ? "open" : ""}`}
         onClick={() => setIsOpen(!isOpen)}
+        aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+        aria-expanded={isOpen}
+        aria-controls="main-nav"
       >
         {isOpen ? "×" : "☰"}
       </button>
 
-      <nav className={`nav ${isOpen ? "open" : ""}`}>
-        <button onClick={() => scrollToSection("home")}>Início</button>
-        <button onClick={() => scrollToSection("skills")}>Skills</button>
-        <button onClick={() => scrollToSection("about")}>Sobre</button>
-        <button onClick={() => scrollToSection("projects")}>Projetos</button>
-        <button onClick={() => scrollToSection("contacts")}>Contactos</button>
+      <nav id="main-nav" className={`nav ${isOpen ? "open" : ""}`} aria-label="Principal">
+        {links.map((link) => (
+          <button
+            key={link.id}
+            className={link.cta ? "nav-cta" : undefined}
+            onClick={() => scrollToSection(link.id)}
+          >
+            {link.label}
+          </button>
+        ))}
       </nav>
     </header>
   );

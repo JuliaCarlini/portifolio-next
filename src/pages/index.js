@@ -1,29 +1,24 @@
 import Header from "../components/Header"
 import Homepag from "../components/Homepag"
-import Skills from "../components/Skills"
-import About from "../components/About"
+import Services from "../components/Services"
 import Projects from "../components/ProjectsSection.jsx"
+import About from "../components/About"
 import Contacts from "../components/Contacts"
 
 export default function Home() {
   return (
     <>
       <Header />
-      <div id="home">
+      <main>
         <Homepag />
-      </div>
-      <div id="skills">
-        <Skills />
-      </div>
-      <div id="about">
-        <About />
-      </div>
-      <div id="projects">
+        <Services />
         <Projects />
-      </div>
-      <div id="contacts">
+        <About />
         <Contacts />
-      </div>
+      </main>
+      <footer className="footer">
+        © {new Date().getFullYear()} Julia Carlini · Leiria, Portugal
+      </footer>
     </>
   )
 }

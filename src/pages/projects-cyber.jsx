@@ -9,10 +9,12 @@ export default function ProjectsCyber() {
       <Header />
       <main className="projects-page">
         <section className="projects-hero">
-          <h1>Projetos de Cibersegurança</h1>
+          <span className="eyebrow">Projetos</span>
+          <h1>Segurança e redes</h1>
           <p>
-            Análises de vulnerabilidades, configuração de redes empresariais,
-            virtualização e implementação de protocolos seguros em ambientes controlados.
+            Testes de intrusão, redes empresariais e virtualização, desenvolvidos
+            em ambiente controlado durante a formação. Cada projeto tem o relatório
+            técnico completo.
           </p>
         </section>
 

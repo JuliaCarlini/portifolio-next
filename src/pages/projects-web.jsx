@@ -9,10 +9,11 @@ export default function ProjectsWeb() {
       <Header />
       <main className="projects-page">
         <section className="projects-hero">
-          <h1>Projetos Web</h1>
+          <span className="eyebrow">Projetos</span>
+          <h1>Desenvolvimento web</h1>
           <p>
-            Aplicações web desenvolvidas com foco em usabilidade, responsividade
-            e boas práticas de desenvolvimento front-end e back-end.
+            Sites para clientes e aplicações web, com foco em desempenho,
+            responsividade e segurança.
           </p>
         </section>
 
