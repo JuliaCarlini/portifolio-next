@@ -1,0 +1,77 @@
++--------------------------------------------------------------------------------------------------------+
+| nav                                                                                                    |
+| [av:] [h3: Julia Carlini]                       [lnk: Serviços] [lnk: Projetos] [lnk: Sobre]           |
+|                                                                        [btn: Contacto [ico:arrow]]     |
++--------------------------------------------------------------------------------------------------------+
+
++------------------------------------------+  +---------------+  +-------------------------------------+
+| hero                                     |  | media         |  | card                                |
+| [t3: [ico:dot] Disponível para projetos  |  | [img: retrato]|  | [h2: Como posso ajudar]             |
+|      freelance]                          |  |               |  | [ico:monitor] [t1: Sites            |
+|                                          |  |               |  |                institucionais]      |
+| [h1: Julia]                              |  |               |  |   [t2: Site responsivo, rápido e    |
+| [h1: Carlini]                            |  |               |  |    preparado para aparecer no       |
+| [h3: Sites profissionais,]               |  |               |  |    Google, do design à publicação.] |
+| [h3: construídos com segurança.]         |  |               |  | [ico:shield] [t1: Revisão de        |
+|                                          |  |               |  |                segurança]           |
+| [t1: Sou a Julia Carlini, desenvolvedora |  |               |  |   [t2: Análise do seu site ou rede, |
+|      web e estudante de Engenharia]      |  |               |  |    com autorização por escrito.]    |
+| [t1: Informática, com formação em        |  |               |  | [ico:refresh] [t1: Manutenção]      |
+|      Cibersegurança. Crio sites à]       |  |               |  |   [t2: Atualizações, cópias de      |
+| [t1: medida para negócios e verifico se  |  |               |  |    segurança e monitorização.]      |
+|      resistem a ataques antes de irem    |  |               |  | ----------------------------------- |
+|      para o ar.]                         |  |               |  | [ico:react] [ico:js] [ico:next]     |
+|                                          |  |               |  | [ico:linux] [ico:cloudflare]        |
+| [btn: Pedir orçamento [ico:arrow]]       |  |               |  +-------------------------------------+
+| [btn2: Ver projetos [ico:arrow]]         |  |               |  +-------------------------------------+
+|                                          |  |               |  | card2                               |
+|                                          |  |               |  | [img: teclado]                      |
+|                                          |  |               |  |   [t3: Segurança por defeito.]      |
+|                                          |  |               |  |   [t3: Boas práticas em todos os    |
+|                                          |  |               |  |        projetos, não como extra.]   |
+|                                          |  |               |  |                       [ico:arrow]   |
++------------------------------------------+  +---------------+  +-------------------------------------+
+
++----------------------------+  +--------------------------------------------+  +-------------------------+
+| card3                      |  | card4                                      |  | card6                   |
+| [h2: Como trabalho]        |  | [h2: Trabalho recente]                     |  | [img: cidade]           |
+|                            |  |               [btn2: Todos os projetos     |  |                         |
+| [t3: 01] [t1: Conversa     |  |                      [ico:arrow]]          |  | [h2: Tem um projeto]    |
+|   inicial]                 |  | +-------------------+ +-------------------+|  | [h2: em mente?]         |
+|   [t2: Percebo o seu       |  | | card5             | | card5             ||  |                         |
+|   negócio e o que o site   |  | | [img: hm]         | | [img: biosite]    ||  | [t1: Conte-me o que     |
+|   precisa de fazer.]       |  | | [t1: HM Escola    | | [t1: BioSite      ||  |  precisa e respondo com |
+| [t3: 02] [t1: Proposta e   |  | |      Kickboxing]  | |  Rozana Dornelas] ||  |  uma proposta.]         |
+|   prazo]                   |  | | [t2: Cliente •    | | [t2: Cliente •    ||  |                         |
+|   [t2: Recebe um orçamento |  | |      React]       | |      React]       ||  | [btn: Enviar mensagem   |
+|   fechado e uma data de    |  | |       [ico:arrow] | |       [ico:arrow] ||  |       [ico:arrow]]      |
+|   entrega.]                |  | +-------------------+ +-------------------+|  |                         |
+| [t3: 03] [t1: Desenvolvi-  |  | +-------------------+ +-------------------+|  | [ico:linkedin]          |
+|   mento]                   |  | | card5             | | card5             ||  | [ico:github]            |
+|   [t2: Acompanha o         |  | | [img: iot]        | | [img: pentest]    ||  | [ico:mail]              |
+|   progresso e pede revi-   |  | | [t1: Protótipo IoT| | [t1: Pentest em   ||  |                         |
+|   sões pelo caminho.]      |  | |  com Comunicação  | |  ambiente         ||  |                         |
+| [t3: 04] [t1: Publicação]  |  | |  Segura]          | |  controlado]      ||  |                         |
+|   [t2: O site vai para o   |  | | [t2: Académico •  | | [t2: Académico •  ||  |                         |
+|   ar, testado e com os     |  | |      PHP]         | |      Relatório]   ||  |                         |
+|   acessos entregues.]      |  | |       [ico:arrow] | |       [ico:arrow] ||  |                         |
+|                            |  | +-------------------+ +-------------------+|  |                         |
++----------------------------+  +--------------------------------------------+  +-------------------------+
+
++--------------------------------------------------+  +--------------------------------------------------+
+| section                                          |  | form                                             |
+| [h2: Sobre]                                      |  | [t1: Nome]                                       |
+| [t1: Estudo Engenharia Informática e concluí um  |  | [in: ...]                                        |
+|      CTeSP em Cibersegurança e Redes ...]        |  | [t1: Email]                                      |
+| +----------------------------------------------+ |  | [in: ...]                                        |
+| | card7                                        | |  | [t1: Mensagem]                                   |
+| | [t3: 2026/27 — atual]                        | |  | [in: Que tipo de site precisa? Tem algum prazo?] |
+| | [t1: Licenciatura em Engenharia Informática] | |  | [btn: Enviar mensagem [ico:arrow]]               |
+| | [t2: Politécnico de Leiria · 1.º ano]        | |  +--------------------------------------------------+
+| | [t3: Concluído em 2025/26]                   | |
+| | [t1: CTeSP em Cibersegurança e Redes         | |
+| |      Informáticas]                           | |
+| | [t2: Politécnico de Leiria]                  | |
+| +----------------------------------------------+ |
+| [btn2: Descarregar CV (PDF) [ico:arrow]]         |
++--------------------------------------------------+

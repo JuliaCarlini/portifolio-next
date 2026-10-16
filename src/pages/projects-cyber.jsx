@@ -7,11 +7,11 @@ export default function ProjectsCyber() {
   return (
     <>
       <Header />
-      <main className="projects-page">
+      <main className="page projects-page">
         <section className="projects-hero">
-          <span className="eyebrow">Projetos</span>
-          <h1>Segurança e redes</h1>
-          <p>
+          <p className="t3 badge">Projetos</p>
+          <h1 className="h1">Segurança e redes</h1>
+          <p className="t1 hero-lead">
             Testes de intrusão, redes empresariais e virtualização, desenvolvidos
             em ambiente controlado durante a formação. Cada projeto tem o relatório
             técnico completo.
@@ -19,13 +19,11 @@ export default function ProjectsCyber() {
         </section>
 
         <section className="projects-list">
-          <div className="projects-grid">
             {projects
               .filter((project) => project.category === "cyber")
               .map((p) => (
                 <ProjectCard key={p.title} {...p} />
               ))}
-          </div>
         </section>
       </main>
     </>

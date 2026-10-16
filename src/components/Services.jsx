@@ -1,24 +1,20 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { FiMonitor, FiShield, FiRefreshCw } from "react-icons/fi";
 
 const services = [
-    {
-        icon: <FiMonitor />,
-        title: "Sites institucionais",
-        text: "Site responsivo, rápido e preparado para aparecer no Google, do design à publicação.",
-    },
-    {
-        icon: <FiShield />,
-        title: "Revisão de segurança",
-        text: "Análise do seu site ou rede, com autorização por escrito. Recebe um relatório com o que foi encontrado, explicado em linguagem simples e com as correções por prioridade.",
-    },
-    {
-        icon: <FiRefreshCw />,
-        title: "Manutenção",
-        text: "Atualizações, cópias de segurança e monitorização, para o site continuar seguro depois de publicado.",
-    },
+    { icon: "monitor", title: "Sites institucionais", text: "Site responsivo, rápido e preparado para aparecer no Google, do design à publicação." },
+    { icon: "shield", title: "Revisão de segurança", text: "Análise do seu site ou rede, com autorização por escrito." },
+    { icon: "refresh", title: "Manutenção", text: "Atualizações, cópias de segurança e monitorização." },
 ];
+
+const tech = [
+    { icon: "react", label: "React" },
+    { icon: "js", label: "JavaScript" },
+    { icon: "next", label: "Next.js" },
+    { icon: "linux", label: "Linux" },
+    { icon: "cloudflare", label: "Cloudflare" },
+];
+
+const practices = ["Formulários protegidos", "Dependências atualizadas", "Servidor bem configurado"];
 
 const steps = [
     { title: "Conversa inicial", text: "Percebo o seu negócio e o que o site precisa de fazer." },
@@ -29,40 +25,52 @@ const steps = [
 
 export default function Services() {
     return (
-        <section id="servicos" className="section section-alt">
-            <div className="section-inner">
-                <span className="eyebrow">Serviços</span>
-                <h2 className="section-title">Como posso ajudar</h2>
-                <p className="section-lead">
-                    Do primeiro site à verificação de segurança de um que já existe.
-                </p>
-
-                <div className="services-grid">
-                    {services.map((s, i) => (
-                        <motion.article
-                            key={s.title}
-                            className="service-card"
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.4, delay: i * 0.08 }}
-                        >
-                            <span className="service-icon" aria-hidden="true">{s.icon}</span>
-                            <h3>{s.title}</h3>
-                            <p>{s.text}</p>
-                        </motion.article>
+        <>
+            <section className="card" id="servicos">
+                <h2 className="h2">Como posso ajudar</h2>
+                <ul className="services">
+                    {services.map((s) => (
+                        <li key={s.title}>
+                            <span className="ico-box" aria-hidden="true"><span className={`ico ico-${s.icon}`}></span></span>
+                            <div>
+                                <h3 className="t1">{s.title}</h3>
+                                <p className="t2">{s.text}</p>
+                            </div>
+                        </li>
                     ))}
-                </div>
+                </ul>
+                <ul className="tech" aria-label="Tecnologias">
+                    {tech.map((t) => (
+                        <li key={t.icon}><span className={`ico ico-tech ico-${t.icon}`} role="img" aria-label={t.label}></span></li>
+                    ))}
+                </ul>
+            </section>
 
-                <ol className="process" aria-label="Como trabalho">
-                    {steps.map((step) => (
+            <a className="card2" href="#sobre">
+                <span className="card2-text">
+                    <span className="t3">Segurança por defeito.</span>
+                    <span className="t2">Boas práticas em todos os projetos, não como extra.</span>
+                    <span className="practices">
+                        {practices.map((p) => <span key={p} className="t3">{p}</span>)}
+                    </span>
+                </span>
+                <span className="ico ico-arrow" aria-hidden="true"></span>
+            </a>
+
+            <section className="card3">
+                <h2 className="h2">Como trabalho</h2>
+                <ol className="steps">
+                    {steps.map((step, i) => (
                         <li key={step.title}>
-                            <strong>{step.title}</strong>
-                            <span>{step.text}</span>
+                            <span className="t3">{String(i + 1).padStart(2, "0")}</span>
+                            <div>
+                                <h3 className="t1">{step.title}</h3>
+                                <p className="t2">{step.text}</p>
+                            </div>
                         </li>
                     ))}
                 </ol>
-            </div>
-        </section>
+            </section>
+        </>
     );
 }

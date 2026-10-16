@@ -5,41 +5,34 @@ export default function ProjectCard({ title, label, imageSrc, description, chall
 
   return (
     <article className="project-card">
-      <img
-        src={imageSrc}
-        alt={`Imagem do projeto ${title}`}
-        loading="lazy"
-        className="project-image"
-      />
+      <img src={imageSrc} alt={`Imagem do projeto ${title}`} loading="lazy" className="img project-image" />
       <div className="project-body">
-        {label && (
-          <span className={`project-label ${label === "Cliente" ? "client" : ""}`}>{label}</span>
-        )}
-        <h3 className="project-title">{title}</h3>
-        <p className="project-description">{description}</p>
+        {label && <span className="t3 project-label">{label}</span>}
+        <h2 className="h2 project-title">{title}</h2>
+        <p className="t1 project-description">{description}</p>
 
         <dl className="project-details">
-          <dt>Desafio</dt>
-          <dd>{challenge}</dd>
-          <dt>Resultado</dt>
-          <dd>{result}</dd>
+          <dt className="t3">Desafio</dt>
+          <dd className="t2">{challenge}</dd>
+          <dt className="t3">Resultado</dt>
+          <dd className="t2">{result}</dd>
         </dl>
 
-        <ul className="project-tools" aria-label="Tecnologias">
+        <ul className="practices project-tools" aria-label="Tecnologias">
           {tools.map((tool) => (
-            <li key={tool}>{tool}</li>
+            <li key={tool} className="t3">{tool}</li>
           ))}
         </ul>
 
         <div className="project-links">
           {liveUrl && (
-            <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="project-link">
-              Ver site ↗
+            <a href={liveUrl} target="_blank" rel="noopener noreferrer" className="btn2">
+              Ver site <span className="ico ico-arrow" aria-hidden="true"></span>
             </a>
           )}
           {repoUrl && (
-            <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="project-link">
-              {isReport ? "Ler relatório (PDF) ↗" : "Ver código ↗"}
+            <a href={repoUrl} target="_blank" rel="noopener noreferrer" className="btn2">
+              {isReport ? "Ler relatório (PDF)" : "Ver código"} <span className="ico ico-arrow" aria-hidden="true"></span>
             </a>
           )}
         </div>

@@ -1,32 +1,34 @@
 import React from "react";
-import ProjectCard from "./ProjectCard";
-import { projects } from "./projects.js";
 import Link from "next/link";
+import { projects } from "./projects.js";
 
 export default function Projects() {
   return (
-    <section id="projetos" className="section">
-      <div className="section-inner">
-        <span className="eyebrow">Projetos</span>
-        <h2 className="section-title">Trabalho recente</h2>
-        <p className="section-lead">
-          Sites feitos para clientes e projetos de segurança desenvolvidos na formação.
-        </p>
-        <div className="projects-grid">
-          {projects
-            .filter(p => p.featured)
-            .map(p => (
-              <ProjectCard key={p.title} {...p} />
-            ))}
-        </div>
-        <div className="projects-more">
-          <Link href="/projects-web" className="button-secondary">
-            Todos os projetos web
+    <section className="card4" id="projetos">
+      <div className="card4-head">
+        <h2 className="h2">Trabalho recente</h2>
+        <div className="card4-links">
+          <Link className="btn2" href="/projects-web">
+            Projetos web <span className="ico ico-arrow" aria-hidden="true"></span>
           </Link>
-          <Link href="/projects-cyber" className="button-secondary">
-            Projetos de segurança
+          <Link className="btn2" href="/projects-cyber">
+            Projetos de segurança <span className="ico ico-arrow" aria-hidden="true"></span>
           </Link>
         </div>
+      </div>
+      <div className="projects">
+        {projects
+          .filter((p) => p.featured)
+          .map((p) => (
+            <a key={p.title} className="card5" href={p.liveUrl || p.repoUrl} target="_blank" rel="noopener noreferrer">
+              <img className="img" src={p.thumbSrc} alt="" loading="lazy" />
+              <span className="card5-body">
+                <span className="t1">{p.shortTitle}</span>
+                <span className="t2">{p.label} • {p.stack}</span>
+              </span>
+              <span className="ico ico-arrow" aria-hidden="true"></span>
+            </a>
+          ))}
       </div>
     </section>
   );

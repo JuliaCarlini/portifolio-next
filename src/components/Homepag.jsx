@@ -1,69 +1,53 @@
 import React from "react";
-import { motion } from "framer-motion";
 
-const facts = [
-    { value: "2", label: "sites em produção para clientes" },
-    { value: "3", label: "relatórios técnicos de segurança" },
-    { value: "Leiria", label: "· trabalho remoto" },
-];
-
-const fadeUp = (delay) => ({
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5, delay },
-});
-
-const Homepag = () => {
-    const scrollToSection = (id) => {
-        const element = document.getElementById(id);
-        if (element) { element.scrollIntoView({ behavior: "smooth" }); }
-    };
-
-    return (
-        <section id="inicio" className="hero">
-            <div className="hero-text">
-                <motion.span className="hero-badge" {...fadeUp(0.1)}>
-                    Disponível para projetos freelance
-                </motion.span>
-
-                <motion.h1 {...fadeUp(0.2)}>
-                    Sites profissionais, construídos com segurança.
-                </motion.h1>
-
-                <motion.p className="hero-lead" {...fadeUp(0.3)}>
-                    Sou a Julia Carlini, desenvolvedora web e estudante de Engenharia
-                    Informática, com formação em Cibersegurança. Crio sites à medida para
-                    negócios e verifico se resistem a ataques antes de irem para o ar.
-                </motion.p>
-
-                <motion.div className="hero-buttons" {...fadeUp(0.4)}>
-                    <button className="button-primary" onClick={() => scrollToSection("contacto")}>
-                        Pedir orçamento
-                    </button>
-                    <button className="button-secondary" onClick={() => scrollToSection("projetos")}>
-                        Ver projetos
-                    </button>
-                </motion.div>
-
-                <motion.ul className="hero-facts" {...fadeUp(0.5)}>
-                    {facts.map((f) => (
-                        <li key={f.value}>
-                            <strong>{f.value}</strong> {f.label}
-                        </li>
-                    ))}
-                </motion.ul>
+// Pilha 3D decorativa: infra → web → segurança
+const Stack3D = () => (
+    <div className="media" aria-hidden="true">
+        <div className="scene">
+            <div className="layers">
+                <div className="layer layer-infra">
+                    <span className="layer-label">infra</span>
+                    <span className="nodes"><i></i><i></i><i></i><i></i></span>
+                </div>
+                <div className="layer layer-web">
+                    <span className="layer-label">web</span>
+                    <span className="browser-bar"><i></i><i></i><i></i></span>
+                    <span className="code"><i></i><i></i><i></i><i></i><i></i></span>
+                </div>
+                <div className="layer layer-sec">
+                    <span className="layer-label">segurança</span>
+                    <span className="shield"><span className="ico ico-lock"></span></span>
+                </div>
             </div>
+        </div>
+    </div>
+);
 
-            <motion.div
-                className="hero-photo-wrapper"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-            >
-                <img className="hero-photo" src="/img/myImg.png" alt="Julia Carlini" />
-            </motion.div>
+const Homepag = () => (
+    <div className="row-top" id="inicio">
+        <section className="hero">
+            <p className="t3 badge">
+                Disponível para projetos freelance <span className="badge-place">· Leiria, PT</span>
+            </p>
+            <h1 className="h1">Julia<br />Carlini</h1>
+            <p className="h3 hero-slogan">Sites profissionais,<br />construídos com segurança.</p>
+            <p className="t1 hero-lead">
+                Sou a Julia Carlini, desenvolvedora web e estudante de Engenharia Informática,
+                com formação em Cibersegurança. Crio sites à medida para negócios e verifico
+                se resistem a ataques antes de irem para o ar.
+            </p>
+            <div className="hero-actions">
+                <a className="btn" href="#contacto">
+                    Pedir orçamento <span className="ico ico-arrow" aria-hidden="true"></span>
+                </a>
+                <a className="btn2" href="#projetos">
+                    Ver projetos <span className="ico ico-arrow" aria-hidden="true"></span>
+                </a>
+            </div>
         </section>
-    );
-};
+
+        <Stack3D />
+    </div>
+);
 
 export default Homepag;

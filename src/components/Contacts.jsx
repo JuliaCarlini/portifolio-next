@@ -1,10 +1,4 @@
 import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
-
-// Ícones importados dinamicamente para evitar Hydration errors
-const FaGithub = dynamic(() => import("react-icons/fa").then(mod => mod.FaGithub), { ssr: false });
-const FaLinkedin = dynamic(() => import("react-icons/fa").then(mod => mod.FaLinkedin), { ssr: false });
-const MdEmail = dynamic(() => import("react-icons/md").then(mod => mod.MdEmail), { ssr: false });
 
 // ID do formulário no Formspree (https://formspree.io/forms)
 const FORMSPREE_ID = "xnpjbelk";
@@ -36,84 +30,29 @@ const Contacts = () => {
   };
 
   return (
-    <section id="contacto" className="section">
-      <div className="section-inner contact">
-        <div>
-          <span className="eyebrow">Contacto</span>
-          <h2 className="section-title">Tem um projeto em mente?</h2>
-          <p className="section-lead">
-            Conte-me o que precisa e respondo com uma proposta.
-          </p>
-
-          <ul className="contact-links">
-            <li>
-              <a href={`mailto:${EMAIL}`}>
-                <MdEmail aria-hidden="true" /> {EMAIL}
-              </a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/julia-carlini" target="_blank" rel="noreferrer">
-                <FaLinkedin aria-hidden="true" /> LinkedIn
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/JuliaCarlini" target="_blank" rel="noreferrer">
-                <FaGithub aria-hidden="true" /> GitHub
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <form onSubmit={handleSubmit} className="contact-form">
-          <div className="form-field">
-            <label htmlFor="contact-name">Nome</label>
-            <input
-              id="contact-name"
-              type="text"
-              name="name"
-              autoComplete="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="contact-email">Email</label>
-            <input
-              id="contact-email"
-              type="email"
-              name="email"
-              autoComplete="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="form-field">
-            <label htmlFor="contact-message">Mensagem</label>
-            <textarea
-              id="contact-message"
-              name="message"
-              rows="5"
-              placeholder="Que tipo de site precisa? Tem algum prazo?"
-              value={formData.message}
-              onChange={handleChange}
-              required
-            ></textarea>
-          </div>
-          <button type="submit" className="button-primary" disabled={status === 'sending'}>
-            {status === 'sending' ? 'A enviar…' : 'Enviar mensagem'}
-          </button>
-          <p className={`form-status ${status}`} role="status" aria-live="polite">
-            {status === 'sent' && '✓ Mensagem enviada. Respondo em breve.'}
-            {status === 'error' && (
-              <>Não foi possível enviar. Tente de novo ou escreva para{' '}
-                <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.</>
-            )}
-          </p>
-        </form>
-      </div>
-    </section>
+    <form className="form" id="contacto" onSubmit={handleSubmit}>
+      <h2 className="h2">Contacto</h2>
+      <label className="t1" htmlFor="f-name">Nome</label>
+      <input className="in" id="f-name" name="name" type="text" autoComplete="name"
+        value={formData.name} onChange={handleChange} required />
+      <label className="t1" htmlFor="f-email">Email</label>
+      <input className="in" id="f-email" name="email" type="email" autoComplete="email"
+        value={formData.email} onChange={handleChange} required />
+      <label className="t1" htmlFor="f-message">Mensagem</label>
+      <textarea className="in" id="f-message" name="message" rows="5"
+        placeholder="Que tipo de site precisa? Tem algum prazo?"
+        value={formData.message} onChange={handleChange} required></textarea>
+      <button className="btn" type="submit" disabled={status === 'sending'}>
+        {status === 'sending' ? 'A enviar…' : 'Enviar mensagem'} <span className="ico ico-arrow" aria-hidden="true"></span>
+      </button>
+      <p className={`t2 form-status ${status}`} role="status" aria-live="polite">
+        {status === 'sent' && 'Mensagem enviada. Respondo em breve.'}
+        {status === 'error' && (
+          <>Não foi possível enviar. Tente de novo ou escreva para{' '}
+            <a href={`mailto:${EMAIL}`}>{EMAIL}</a>.</>
+        )}
+      </p>
+    </form>
   );
 };
 

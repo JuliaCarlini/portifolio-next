@@ -1,9 +1,13 @@
 // label: "Cliente" para trabalho real em produção; o resto é académico/pessoal.
+// featured, shortTitle, thumbSrc e stack alimentam os cards da página inicial.
 // repoUrl a terminar em .pdf aparece como relatório; repositórios privados não têm repoUrl.
 
 export const projects = [
   {
     title: "Website institucional – HM Escola Kickboxing",
+    shortTitle: "HM Escola Kickboxing",
+    thumbSrc: "/img/thumbs/hm.jpg",
+    stack: "React",
     category: "web",
     label: "Cliente",
     imageSrc: "/img/hm.png",
@@ -16,6 +20,9 @@ export const projects = [
   },
   {
     title: "BioSite – Rozana Dornelas",
+    shortTitle: "BioSite Rozana Dornelas",
+    thumbSrc: "/img/thumbs/biosite.jpg",
+    stack: "React",
     category: "web",
     label: "Cliente",
     imageSrc: "/img/biosite.jpg",
@@ -28,6 +35,9 @@ export const projects = [
   },
   {
     title: "Protótipo IoT com Comunicação Segura",
+    shortTitle: "Protótipo IoT com Comunicação Segura",
+    thumbSrc: "/img/thumbs/iot.jpg",
+    stack: "PHP",
     category: "web",
     label: "Académico",
     imageSrc: "/img/iot.png",
@@ -41,6 +51,9 @@ export const projects = [
   },
   {
     title: "Pentest em ambiente controlado",
+    shortTitle: "Pentest em ambiente controlado",
+    thumbSrc: "/img/thumbs/pentest.jpg",
+    stack: "Relatório",
     category: "cyber",
     label: "Académico",
     imageSrc: "/img/pentest.png",
@@ -49,7 +62,7 @@ export const projects = [
     result: "Vulnerabilidades críticas e médias identificadas, com recomendações de mitigação.",
     tools: ["Pentest", "Wireshark", "Linux"],
     repoUrl: "/reports/projeto-pentest.pdf",
-    featured: false
+    featured: true
   },
   {
     title: "Rede Empresarial com Gestão Centralizada",

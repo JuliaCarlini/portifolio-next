@@ -10,7 +10,7 @@ export default function Document() {
       <Head>
         <meta name="description" content={DESCRIPTION} />
         <meta name="author" content="Julia Carlini" />
-        <meta name="theme-color" content="#0F1115" />
+        <meta name="theme-color" content="#101111" />
 
         {/* Open Graph — LinkedIn, WhatsApp, etc. */}
         <meta property="og:title" content={TITLE} />
@@ -30,7 +30,7 @@ export default function Document() {
         <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet" />
       </Head>
       <body>
         <Main />
