@@ -1,11 +1,12 @@
 import React from "react";
 
-export default function ProjectCard({ title, label, imageSrc, description, challenge, result, repoUrl, liveUrl, tools }) {
+export default function ProjectCard({ title, label, imageSrc, imagePosition, description, challenge, result, repoUrl, liveUrl, tools }) {
   const isReport = repoUrl?.endsWith(".pdf");
 
   return (
     <article className="project-card">
-      <img src={imageSrc} alt={`Imagem do projeto ${title}`} loading="lazy" className="img project-image" />
+      <img src={imageSrc} alt={`Imagem do projeto ${title}`} loading="lazy" className="img project-image"
+        style={imagePosition ? { objectPosition: imagePosition } : undefined} />
       <div className="project-body">
         {label && <span className="t3 project-label">{label}</span>}
         <h2 className="h2 project-title">{title}</h2>

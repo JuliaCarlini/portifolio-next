@@ -1,4 +1,5 @@
 // label: "Cliente" para trabalho real em produção; o resto é académico/pessoal.
+// imagePosition: parte da imagem que fica visível na página de projetos (padrão: center).
 // featured, shortTitle, thumbSrc e stack alimentam os cards da página inicial.
 // repoUrl a terminar em .pdf aparece como relatório; repositórios privados não têm repoUrl.
 
@@ -7,6 +8,7 @@ export const projects = [
     title: "Website institucional – HM Escola Kickboxing",
     shortTitle: "HM Escola Kickboxing",
     thumbSrc: "/img/thumbs/hm.jpg",
+    imagePosition: "left center",
     stack: "React",
     category: "web",
     label: "Cliente",
@@ -22,6 +24,7 @@ export const projects = [
     title: "BioSite – Rozana Dornelas",
     shortTitle: "BioSite Rozana Dornelas",
     thumbSrc: "/img/thumbs/biosite.jpg",
+    imagePosition: "left center",
     stack: "React",
     category: "web",
     label: "Cliente",
