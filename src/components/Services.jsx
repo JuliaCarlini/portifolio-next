@@ -46,7 +46,7 @@ export default function Services() {
                 </ul>
             </section>
 
-            <a className="card2" href="#sobre">
+            <section className="card2" aria-label="Segurança por defeito">
                 <span className="card2-text">
                     <span className="t3">Segurança por defeito.</span>
                     <span className="t2">Boas práticas em todos os projetos, não como extra.</span>
@@ -54,8 +54,7 @@ export default function Services() {
                         {practices.map((p) => <span key={p} className="t3">{p}</span>)}
                     </span>
                 </span>
-                <span className="ico ico-arrow" aria-hidden="true"></span>
-            </a>
+            </section>
 
             <section className="card3">
                 <h2 className="h2">Como trabalho</h2>

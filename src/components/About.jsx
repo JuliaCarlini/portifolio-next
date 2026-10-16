@@ -12,8 +12,7 @@ export default function About() {
             <p className="t1">
                 Estudo Engenharia Informática e concluí um CTeSP em Cibersegurança e Redes
                 Informáticas. Essa combinação define a forma como trabalho: cada site é pensado
-                desde o início para ser difícil de atacar, com formulários protegidos,
-                dependências atualizadas e servidor bem configurado.
+                desde o início para ser difícil de atacar.
             </p>
             <ul className="card7">
                 {education.map((edu) => (
