@@ -5,6 +5,7 @@ import Projects from "../components/ProjectsSection.jsx"
 import CallToAction from "../components/CallToAction"
 import About from "../components/About"
 import Contacts from "../components/Contacts"
+import Footer from "../components/Footer"
 
 export default function Home() {
   return (
@@ -20,9 +21,7 @@ export default function Home() {
           <Contacts />
         </div>
       </main>
-      <footer className="footer t3">
-        © {new Date().getFullYear()} Julia Carlini · Leiria, Portugal
-      </footer>
+      <Footer />
     </>
   )
 }

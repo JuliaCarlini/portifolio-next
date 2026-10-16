@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../components/projects";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export default function ProjectsCyber() {
   return (
@@ -26,6 +27,7 @@ export default function ProjectsCyber() {
               ))}
         </section>
       </main>
+      <Footer />
     </>
   );
 }

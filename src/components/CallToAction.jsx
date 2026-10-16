@@ -1,6 +1,5 @@
 import React from "react";
-
-const EMAIL = "julia.dornelas@outlook.com";
+import { socialLinks } from "./social";
 
 export default function CallToAction() {
   return (
@@ -11,9 +10,13 @@ export default function CallToAction() {
         Enviar mensagem <span className="ico ico-arrow" aria-hidden="true"></span>
       </a>
       <ul className="social">
-        <li><a href="https://www.linkedin.com/in/julia-carlini" target="_blank" rel="noreferrer" aria-label="LinkedIn"><span className="ico ico-linkedin" aria-hidden="true"></span></a></li>
-        <li><a href="https://github.com/JuliaCarlini" target="_blank" rel="noreferrer" aria-label="GitHub"><span className="ico ico-github" aria-hidden="true"></span></a></li>
-        <li><a href={`mailto:${EMAIL}`} aria-label="Email"><span className="ico ico-mail" aria-hidden="true"></span></a></li>
+        {socialLinks.map((s) => (
+          <li key={s.icon}>
+            <a href={s.href} target={s.external ? "_blank" : undefined} rel={s.external ? "noreferrer" : undefined} aria-label={s.label}>
+              <span className={`ico ico-${s.icon}`} aria-hidden="true"></span>
+            </a>
+          </li>
+        ))}
       </ul>
     </section>
   );
